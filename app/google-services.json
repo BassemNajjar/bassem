@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "944756616624",
+    "project_id": "bassem-main",
+    "storage_bucket": "bassem-main.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:944756616624:android:6a759dd1667a8896453a75",
+        "android_client_info": {
+          "package_name": "com.example.bassem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTwnrJQsUBMsnhgXMp3JH3bOfBuxZ9nlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
