@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pages.RestaurantDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ImageView for Car Image -->
+
+        <ImageView
+            android:id="@+id/ivRestaurantDetailsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:clickable="true"
+            android:contentDescription="Restaurant Image"
+            android:onClick="toBigImg"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"/>
+
+        <!-- Car Name -->
+        <TextView
+            android:id="@+id/textView111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Name :"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvResName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="-20dp"
+            android:hint="name..." />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="description :"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvResDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="description..."
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="-20dp"/>
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:text="Phone :"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="phone..."
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="-20dp"/>
+
+
+        <TextView
+            android:id="@+id/tvaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Address:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="address..."
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="-20dp"/>
+
+    </LinearLayout>
+</FrameLayout>

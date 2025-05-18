@@ -1,5 +1,7 @@
 package com.example.bassem.data;
 
+import android.os.Parcel;
+
 public class User {private String id;
     private String firstName;
     private String lastName;
@@ -80,13 +82,13 @@ public class User {private String id;
     @Override
     public String toString() {
         return "User{" +
-                "id='" + id + ''' +
-        ", firstName='" + firstName + ''' +
-        ", lastName='" + lastName + ''' +
-        ", birthdate='" + birthdate + ''' +
-        ", phone='" + phone + ''' +
-        ", username='" + username + ''' +
-        ", photo='" + photo + ''' +
-        '}';
+                "id='" + id + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthdate='" + birthdate + '\'' +
+                ", phone='" + phone + '\'' +
+                ", username='" + username + '\'' +
+                ", photo='" + photo + '\'' +
+                '}';
     }
 }

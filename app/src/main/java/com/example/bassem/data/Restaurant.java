@@ -5,6 +5,7 @@ public class Restaurant {
     private String description;
     private String address;
     private String phone;
+    private String photo;
 
     public Restaurant() {
     }
@@ -14,6 +15,7 @@ public class Restaurant {
         this.description = description;
         this.address = address;
         this.phone = phone;
+        this.photo = photo;
     }
 
     public String getName() {
@@ -48,6 +50,14 @@ public class Restaurant {
         this.phone = phone;
     }
 
+    public String getphoto() {
+        return photo;
+    }
+
+    public void setphoto(String photo) {
+        this.photo = photo;
+    }
+
     @Override
     public String toString() {
         return "Restaurant{" +
@@ -55,6 +65,7 @@ public class Restaurant {
                 ", description='" + description + '\'' +
                 ", address='" + address + '\'' +
                 ", phone='" + phone + '\'' +
+                ", photo='" + photo + '\'' +
                 '}';
     }
 }
