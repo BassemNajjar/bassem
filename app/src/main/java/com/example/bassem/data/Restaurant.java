@@ -1,4 +1,4 @@
-package com.example.bassem;
+package com.example.bassem.data;
 
 public class Restaurant {
     private String name;

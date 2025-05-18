@@ -1,4 +1,4 @@
-package com.example.bassem;
+package com.example.bassem.activities;
 
 import android.os.Bundle;
 
@@ -8,6 +8,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.FragmentTransaction;
+
+import com.example.bassem.R;
+import com.example.bassem.pages.LoginFragment;
 
 public class MainActivity extends AppCompatActivity {
 

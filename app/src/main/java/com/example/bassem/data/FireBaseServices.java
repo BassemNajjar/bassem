@@ -1,4 +1,4 @@
-package com.example.bassem;
+package com.example.bassem.data;
 
 import android.net.Uri;
 

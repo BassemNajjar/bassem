@@ -1,4 +1,4 @@
-package com.example.bassem;
+package com.example.bassem.pages;
 
 import android.os.Bundle;
 
@@ -13,6 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.bassem.data.FireBaseServices;
+import com.example.bassem.R;
+import com.example.bassem.data.Restaurant;
+import com.example.bassem.adapters.RestaurantAdapter;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;

@@ -1,4 +1,4 @@
-package com.example.bassem;
+package com.example.bassem.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.bassem.R;
+import com.example.bassem.data.FireBaseServices;
+import com.example.bassem.data.Restaurant;
 
 import java.util.ArrayList;
 
