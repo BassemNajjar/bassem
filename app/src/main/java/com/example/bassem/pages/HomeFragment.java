@@ -3,12 +3,15 @@ package com.example.bassem.pages;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.bassem.R;
+import com.example.bassem.data.FireBaseServices;
+import com.google.android.material.button.MaterialButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +19,9 @@ import com.example.bassem.R;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
+    private FireBaseServices fbs;
+    private MaterialButton btnAddNewProduct, btnAllProducts;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,11 +62,29 @@ public class HomeFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        btnAddNewProduct = view.findViewById(R.id.btnAddNewProduct);
+        btnAllProducts = view.findViewById(R.id.btnAllProducts);
+
+        btnAddNewProduct.setOnClickListener(v -> {
+            FragmentTransaction ft = requireActivity().getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.main, new AddRestaurantFragment());
+            ft.addToBackStack(null);
+            ft.commit();
+        });
+
+        btnAllProducts.setOnClickListener(v -> {
+            FragmentTransaction ft = requireActivity().getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.main, new AllRestaurantsFragment());
+            ft.addToBackStack(null);
+            ft.commit();
+        });
+
+        return view;
     }
 }

@@ -1,74 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".pages.AddRestaurantFragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="24dp">
 
         <EditText
             android:id="@+id/etNameAddRestaurantFragment"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="77dp"
-            android:layout_marginBottom="33dp"
-            android:ems="10"
-            android:hint="name..."
+            android:hint="Name..."
             android:inputType="text"
-            app:layout_constraintBottom_toTopOf="@+id/etDescAddRestaurantFragment"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <EditText
             android:id="@+id/etDescAddRestaurantFragment"
-            android:layout_width="204dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="37dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="description..."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Description..."
             android:inputType="textMultiLine"
-            app:layout_constraintBottom_toTopOf="@+id/etAddressAddRestaurantFragment"
-            app:layout_constraintStart_toStartOf="@+id/etNameAddRestaurantFragment"
-            app:layout_constraintTop_toBottomOf="@+id/etNameAddRestaurantFragment" />
+            android:minHeight="48dp"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/etNameAddRestaurantFragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <EditText
             android:id="@+id/etAddressAddRestaurantFragment"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp"
-            android:ems="10"
-            android:hint="address..."
-            android:inputType="text|textPostalAddress"
-            app:layout_constraintBottom_toTopOf="@+id/etPhoneAddRestaurantFragment"
-            app:layout_constraintStart_toStartOf="@+id/etDescAddRestaurantFragment"
-            app:layout_constraintTop_toBottomOf="@+id/etDescAddRestaurantFragment" />
+            android:hint="Address..."
+            android:inputType="textPostalAddress"
+            android:minHeight="48dp"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/etDescAddRestaurantFragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <EditText
             android:id="@+id/etPhoneAddRestaurantFragment"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="68dp"
-            android:ems="10"
-            android:hint="phone..."
+            android:hint="Phone..."
             android:inputType="phone"
-            app:layout_constraintBottom_toTopOf="@+id/btnAddAddRestaurantFragment"
-            app:layout_constraintStart_toStartOf="@+id/etAddressAddRestaurantFragment"
-            app:layout_constraintTop_toBottomOf="@+id/etAddressAddRestaurantFragment" />
+            android:minHeight="48dp"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/etAddressAddRestaurantFragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
             android:id="@+id/btnAddAddRestaurantFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="249dp"
             android:text="Add"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingHorizontal="32dp"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/etPhoneAddRestaurantFragment"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etPhoneAddRestaurantFragment" />
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

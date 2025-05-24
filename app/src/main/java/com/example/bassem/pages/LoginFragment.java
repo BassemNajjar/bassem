@@ -115,7 +115,7 @@ public class LoginFragment extends Fragment {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(getActivity(), "Successfully login up", Toast.LENGTH_SHORT).show();
-                        gotoAddCarFragment();
+                        goToHomeFragment();
 
                     }
 
@@ -132,17 +132,17 @@ public class LoginFragment extends Fragment {
 
     private void gotoSignupFragment() {
         FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(FrameLayoutsMain,new SignupFragment());
+        ft.replace(R.id.main,new SignupFragment());
         ft.commit();
     }
     private void gotoforgotFragment() {
         FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.FrameLayoutsMain,new Forgot_passwordFragment());
+        ft.replace(R.id.main,new Forgot_passwordFragment());
         ft.commit();
     }
-    private void gotoAddCarFragment() {
-        FragmentTransaction ft=getActivity().getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.FrameLayoutsMain,new AddCarFragment());
+    private void goToHomeFragment() {
+        FragmentTransaction ft = requireActivity().getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.main, new HomeFragment());
         ft.commit();
     }
     
