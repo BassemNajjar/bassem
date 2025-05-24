@@ -6,6 +6,7 @@ public class Restaurant {
     private String address;
     private String phone;
     private String photo;
+    private String imageUrl;
 
     public Restaurant() {
     }
@@ -15,7 +16,8 @@ public class Restaurant {
         this.description = description;
         this.address = address;
         this.phone = phone;
-        this.photo = photo;
+        this.imageUrl = imageUrl;
+
     }
 
     public String getName() {
@@ -56,6 +58,9 @@ public class Restaurant {
 
     public void setphoto(String photo) {
         this.photo = photo;
+    }
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     @Override

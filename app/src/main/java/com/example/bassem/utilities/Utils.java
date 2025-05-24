@@ -54,33 +54,27 @@ public class Utils {private static Utils instance;
 
     public static void uploadImage(Context context, Uri selectedImageUri) {
         if (selectedImageUri != null) {
-            imageStr = "images/" + UUID.randomUUID() + ".jpg"; //+ selectedImageUri.getLastPathSegment();
-            StorageReference imageRef = fbs.getStorage().getReference().child("images/" + selectedImageUri.getLastPathSegment());
+            // اسم فريد للصورة داخل مجلد images/
+            String imageName = "images/" + UUID.randomUUID() + ".jpg";
+            StorageReference imageRef = fbs.getStorage().getReference().child(imageName);
 
             UploadTask uploadTask = imageRef.putFile(selectedImageUri);
-            uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                        @Override
-                        public void onSuccess(Uri uri) {
-                            //selectedImageUri = uri;
-                            fbs.setSelectedImageURL(uri);
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Log.e("Utils: uploadImage: ", e.getMessage());
-                        }
+            uploadTask
+                    .addOnSuccessListener(taskSnapshot -> {
+                        imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
+                            fbs.setSelectedImageURL(uri); // حفظ رابط الصورة
+                        }).addOnFailureListener(e -> {
+                            Log.e("Utils: getDownloadUrl", e.getMessage());
+                            Toast.makeText(context, "Failed to retrieve image URL", Toast.LENGTH_SHORT).show();
+                        });
+
+                        Toast.makeText(context, "Image uploaded successfully", Toast.LENGTH_SHORT).show();
+                    })
+                    .addOnFailureListener(e -> {
+                        Log.e("Utils: uploadImage", e.getMessage());
+                        Toast.makeText(context, "Failed to upload image", Toast.LENGTH_SHORT).show();
                     });
-                    Toast.makeText(context, "Image uploaded successfully", Toast.LENGTH_SHORT).show();
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(context, "Failed to upload image", Toast.LENGTH_SHORT).show();
-                }
-            });
+
         } else {
             Toast.makeText(context, "Please choose an image first", Toast.LENGTH_SHORT).show();
         }
